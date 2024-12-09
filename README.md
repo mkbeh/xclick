@@ -72,8 +72,8 @@ Pass `embed.FS` with option `WithMigrations`
 
 ```go
 pool, _ := clickhouse.NewPool(
-...
-postgres.WithMigrations(migrations.FS),
+    ...
+    clickhouse.WithMigrations(migrations.FS),
 )
 ```
 
