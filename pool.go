@@ -1,6 +1,7 @@
 package clickhouse
 
 import (
+	"context"
 	"crypto/tls"
 	"embed"
 	"log/slog"
@@ -48,6 +49,10 @@ func NewPool(opts ...Option) (*Pool, error) {
 
 	conn, err := clickhouse.Open(connOpts)
 	if err != nil {
+		return nil, err
+	}
+
+	if err := conn.Ping(context.Background()); err != nil {
 		return nil, err
 	}
 
