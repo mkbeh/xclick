@@ -11,7 +11,7 @@ import (
 	"github.com/ClickHouse/clickhouse-go/v2"
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 	"github.com/Masterminds/squirrel"
-	"github.com/mkbeh/clickhouse/internal/pkg/poolcollector"
+	"github.com/mkbeh/xclick/internal/pkg/poolcollector"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

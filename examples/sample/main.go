@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/mkbeh/clickhouse"
-	"github.com/mkbeh/clickhouse/examples/sample/migrations"
+	"github.com/mkbeh/xclick"
+	"github.com/mkbeh/xclick/examples/sample/migrations"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
