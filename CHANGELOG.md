@@ -1,4 +1,4 @@
-# 0.1.1 (January 16, 2025)
+# 0.1.2 (January 16, 2025)
 
 * chore: rename module to xclick
 
