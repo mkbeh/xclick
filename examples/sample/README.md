@@ -16,6 +16,12 @@ CLICKHOUSE_DB=sample_app
 CLICKHOUSE_MIGRATE_ARGS=x-multi-statement=true&x-cluster-name=distributed_cluster&x-migrations-table-engine=ReplicatedMergeTree
 ```
 
+Set up docker-compose:
+
+```shell
+docker-compose up --build -d
+```
+
 Run main.go:
 
 ```
