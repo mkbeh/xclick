@@ -15,8 +15,8 @@ services:
       - common-network
 
   clickhouse01:
-    image: clickhouse/clickhouse-server:head-alpine
-    container_name: goods-incomes-clickhouse-1
+    image: clickhouse/clickhouse-server:22.5-alpine
+    container_name: clickhouse-01
     env_file:
       - ./.env.template
     ports:
@@ -24,7 +24,7 @@ services:
       - "9001:9000" # TCP интерфейс
     volumes:
       - ./scripts/init_clickhouse.sh:/docker-entrypoint-initdb.d/init_clickhouse.sh
-      - ./configs/clickhouse1/config.xml:/etc/clickhouse-server/config.xml
+      - ./configs/clickhouse01/config.xml:/etc/clickhouse-server/config.xml
       - sample-app-chdata-01:/var/lib/clickhouse
     depends_on:
       - zookeeper
@@ -32,8 +32,8 @@ services:
       - common-network
 
   clickhouse02:
-    image: clickhouse/clickhouse-server:head-alpine
-    container_name: goods-incomes-clickhouse-2
+    image: clickhouse/clickhouse-server:22.5-alpine
+    container_name: clickhouse-02
     env_file:
       - ./.env.template
     ports:
@@ -41,7 +41,7 @@ services:
       - "9002:9000" # TCP интерфейс
     volumes:
       - ./scripts/init_clickhouse.sh:/docker-entrypoint-initdb.d/init_clickhouse.sh
-      - ./configs/clickhouse2/config.xml:/etc/clickhouse-server/config.xml
+      - ./configs/clickhouse02/config.xml:/etc/clickhouse-server/config.xml
       - sample-app-chdata-02:/var/lib/clickhouse
     depends_on:
       - zookeeper
@@ -72,7 +72,7 @@ services:
     depends_on:
       - kafka
     ports:
-      - "28182:8080"
+      - "18080:8080"
     environment:
       - KAFKA_BROKERS=kafka:9092
       - KAFKA_TLS_ENABLED=false
