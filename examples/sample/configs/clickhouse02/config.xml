@@ -58,7 +58,7 @@
 
     <macros>
         <cluster>distributed_cluster</cluster>
-        <shard>01</shard>
+        <shard>02</shard>
         <replica>clickhouse02</replica>
     </macros>
 
