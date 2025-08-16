@@ -1,6 +1,6 @@
 module github.com/mkbeh/xclick
 
-go 1.24
+go 1.25
 
 require (
 	github.com/ClickHouse/clickhouse-go/v2 v2.40.1
@@ -33,7 +33,7 @@ require (
 	go.opentelemetry.io/otel v1.37.0 // indirect
 	go.opentelemetry.io/otel/trace v1.37.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
-	golang.org/x/sys v0.34.0 // indirect
-	google.golang.org/protobuf v1.36.6 // indirect
+	golang.org/x/sys v0.35.0 // indirect
+	google.golang.org/protobuf v1.36.7 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
